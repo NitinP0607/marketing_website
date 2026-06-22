@@ -249,6 +249,12 @@ import shoes from "./shoes.jpg";
 import shirts from "./T-shirts.jpg";
 import middie from "./middie_dress.jpg";
 import fromaldressMens from "./formaldress_men.jpg";
+import electronic from "./electronics.jpg";
+import fashion from "./fashion.jpg";
+import sport from "./sports.jpg"
+import beaty from "./beaty.jpg";
+import accessories from "./accessories.jpg"
+import kitchen from "./homeandkitchen.jpg"
 
 
 export const assets = {
@@ -292,4 +298,47 @@ export const products = [
     title: "Middie",
     desc: "Fashionable middie dress offering comfort and style for parties, outings, and daily use.",
   },
+];
+export const categories = [
+  {
+    id: 1,
+    image: electronic,
+    title: "Electronics",
+    desc: "Explore the latest smartphones, laptops, headphones, smartwatches, and accessories from top brands with amazing deals and discounts."
+  },
+
+  {
+    id: 2,
+    image: fashion,
+    title: "Fashion",
+    desc: "Discover stylish clothing, footwear, and trendy outfits for men, women, and kids suitable for every occasion."
+  },
+
+  {
+    id: 3,
+    image: beaty,
+    title: "Beauty",
+    desc: "Find premium skincare, makeup, hair care, and personal care products designed to enhance your daily routine."
+  },
+
+  {
+    id: 4,
+    image: kitchen,
+    title: "Home & Kitchen",
+    desc: "Browse essential home appliances, kitchen tools, cookware, and decor items to improve your lifestyle and comfort."
+  },
+
+  {
+    id: 5,
+    image: accessories,
+    title: "Accessories",
+    desc: "Shop watches, sunglasses, bags, wallets, jewelry, and other fashionable accessories to complement your style."
+  },
+
+  {
+    id: 6,
+    image: sport,
+    title: "Sports",
+    desc: "Explore sports equipment, fitness accessories, activewear, and outdoor products for a healthy and active lifestyle."
+  }
 ];

@@ -13,25 +13,22 @@ function Navbar() {
       <nav className="navbar">
         {/* Logo */}
         <div className="logo">
-          <h2 onClick={()=>navigate("/")}>DealHub</h2>
+          <h2 onClick={()=>navigate("/")}>ShopEase</h2>
         </div>
 
         {/* Desktop Links */}
         <ul className="desktop-links">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <Link to="/products">Products</Link>
+            <Link to="/products">PRODUCTS</Link>
           </li>
           <li>
-            <Link to="/categories">Categories</Link>
+            <Link to="/about">ABOUT</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">CONTACT</Link>
           </li>
         </ul>
 
@@ -65,13 +62,6 @@ function Navbar() {
               Products
             </Link>
           </li>
-
-          <li>
-            <Link to="/categories" onClick={() => setMenuOpen(false)}>
-              Categories
-            </Link>
-          </li>
-
           <li>
             <Link to="/about" onClick={() => setMenuOpen(false)}>
               About
