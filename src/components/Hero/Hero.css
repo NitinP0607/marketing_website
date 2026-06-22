@@ -79,7 +79,6 @@
 .hero-right img {
   width: 100%;
   max-width: 650px;
-
   animation: float 5s ease-in-out infinite;
 
   transition: 0.4s;
@@ -189,4 +188,19 @@
   .primary-btn {
     width: 100%;
   }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  .hero {
+    display: flex;
+    
+  }
+  .hero-left, .hero-right{
+    width: 50%;
+  }
+   .primary-btn{
+    width: 80%;
+   }
+   .hero-right img {
+    width: 400px;
+   }
 }

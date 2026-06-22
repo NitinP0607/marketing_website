@@ -1,14 +1,26 @@
 import React from 'react'
 import "./FeaturedProducts.css"
-import { assets } from '../../assets/assets'
+import { products } from '../../assets/assets'
 
 const FeaturedProducts = () => {
   return (
     <div className='featured-collection'>
-      <div className="collection-container">
-        <div className="collection-box">
-            <img src={assets.hero_img} alt="" />
-        </div>
+      <div className="featuredocllection-tittle">
+        <h2>COLLECTION OF FEATURED PRODUCTS</h2>
+      </div>
+      <div className="collections">
+        <div className="collection-container">
+            {products.map((product) => (
+          <div className="featured-collection-box" key={product.id}>
+            <img src={product.image} alt={product.title} />
+
+            <div className="featuredcollection-boxdetails">
+              <h3>{product.title}</h3>
+              <p>{product.desc}</p>
+            </div>
+          </div>
+        ))}
+          </div>
       </div>
     </div>
   )

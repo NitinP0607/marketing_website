@@ -13,7 +13,6 @@
 // import tvImg from "./images/tv.webp";
 // import bagImg from "./images/bag.webp";
 // import trimmerImg from "./images/trimmer.webp";
-import hero_img from "./hero-section.png"
 
 // export const products = [
 // {
@@ -243,6 +242,54 @@ import hero_img from "./hero-section.png"
 // }
 // ];
 
+import hero_img from "./hero-section.png";
+import earphone from "./earphone.jpg";
+import jeansTop from "./JeansTop_Combo.jpg";
+import shoes from "./shoes.jpg";
+import shirts from "./T-shirts.jpg";
+import middie from "./middie_dress.jpg";
+import fromaldressMens from "./formaldress_men.jpg";
+
+
 export const assets = {
     hero_img
 }
+
+export const products = [
+  {
+    id: 1,
+    image: shoes,
+    title: "Shoes",
+    desc: "Durable and comfortable shoes designed for running, walking, and daily wear.",
+  },
+  {
+    id: 2,
+    image: earphone,
+    title: "Earphone",
+    desc: "High-quality earphones offering crystal clear sound, deep bass, and noise isolation.",
+  },
+  {
+    id: 3,
+    image: fromaldressMens,
+    title: "Formal Dress (Mens)",
+    desc: "Elegant men’s formal dress perfect for office meetings, parties, and special occasions.",
+  },
+  {
+    id: 4,
+    image: jeansTop,
+    title: "Jeans Top",
+    desc: "Trendy denim top that pairs well with jeans, skirts, and casual outfits.",
+  },
+  {
+    id: 5,
+    image: shirts,
+    title: "Shirts",
+    desc: "Stylish shirts available in multiple colors, suitable for both casual and formal wear.",
+  },
+  {
+    id: 6,
+    image: middie,
+    title: "Middie",
+    desc: "Fashionable middie dress offering comfort and style for parties, outings, and daily use.",
+  },
+];
