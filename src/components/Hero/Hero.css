@@ -1,0 +1,192 @@
+.hero {
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  padding: 0px 3%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  background: #e7e7e7;
+  overflow: hidden;
+}
+
+.hero-left {
+  width: 60%;
+  animation: fadeLeft 1s ease;
+}
+
+.hero-badge {
+  font-size: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: linear-gradient(
+    90deg,
+    #352424,
+    #ff9933,
+    #353124,
+    #33cc33,
+    #536577,
+    #271d31
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-left h1 {
+  margin-top: 25px;
+  font-size: 2rem;
+  color: #4e4e4e;
+}
+
+.hero-left h1 span {
+  color: #835a70;
+}
+
+.hero-left p {
+  margin-top: 20px;
+  line-height: 1.4;
+  color: #353535;
+  font-size: 20px;
+}
+
+.hero-buttons {
+  margin-top: 40px;
+}
+
+.primary-btn {
+  padding: 18px 40px;
+  width: 50%;
+  border: none;
+  outline: none;
+  background: #804747;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.primary-btn:hover {
+  font-size: 20px;
+  padding: 14px 32px;
+  box-shadow: 0 15px 35px rgba(49, 40, 34, 0.4);
+}
+
+.hero-right {
+  width: 40%;
+  animation: fadeRight 1s ease;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 650px;
+
+  animation: float 5s ease-in-out infinite;
+
+  transition: 0.4s;
+}
+
+.hero-right img:hover {
+  transform: scale(1.05);
+}
+/* Animation  */
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*For mobile */
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px 1%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+  }
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+  .hero-badge p {
+    text-align: start;
+    font-weight: 800;
+  }
+  .hero-left h1 {
+    font-size: 1.8rem;
+    text-align: start;
+  }
+
+  .hero-left p {
+    font-size: 20px;
+    text-align: start;
+  }
+  .hero-right {
+    width: 100%;
+  }
+  .primary-btn {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* For tablet and small device */
+@media screen and (min-width: 513px) and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 80px 20px;
+  }
+  .hero-left p {
+    padding: 25px;
+  }
+  .hero-left h1 {
+    padding: 22px;
+  }
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+  .hero-badge {
+    padding: 20px;
+    font-size: 35px;
+  }
+  .primary-btn {
+    width: 100%;
+  }
+}
