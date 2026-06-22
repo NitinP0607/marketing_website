@@ -1,6 +1,7 @@
 import React from 'react'
 import "./FeaturedProducts.css"
 import { products } from '../../assets/assets'
+import { FaStar } from 'react-icons/fa';
 
 const FeaturedProducts = () => {
   return (
@@ -15,7 +16,15 @@ const FeaturedProducts = () => {
             <img src={product.image} alt={product.title} />
 
             <div className="featuredcollection-boxdetails">
-              <h3>{product.title}</h3>
+              <div className="featured-ratings-details">
+                <h3>{product.title}</h3>
+                <div>
+                  <FaStar color="gold" />
+                  <FaStar color="gold" />
+                  <FaStar color="gold" />
+                  <FaStar color="gold" />
+                </div>
+              </div>
               <p>{product.desc}</p>
             </div>
           </div>
