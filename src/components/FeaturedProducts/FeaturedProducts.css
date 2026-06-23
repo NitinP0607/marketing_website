@@ -63,7 +63,7 @@
 
     .featured-collection-box img{
         height: 400px;
-        width: 95%;
+        width: 100%;
     }
     .collection-container{
         grid-template-columns: 1fr;
