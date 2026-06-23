@@ -1,4 +1,3 @@
-import React from 'react'
 import "./FeaturedCategories.css"
 import { categories } from '../../assets/assets'
 import { Link } from "react-router-dom";
