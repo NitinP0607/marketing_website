@@ -1,5 +1,6 @@
 .featured-categories{
     padding: 80px 5%;
+    overflow-x: hidden;
     background: #f8fafc;
 }
 
@@ -30,7 +31,6 @@
 .category-card{
     background: white;
     border-radius: 15px;
-    overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,.1);
     transition: .3s;
     cursor: pointer;
@@ -118,7 +118,7 @@
 @media (max-width: 480px){
 
     .featured-categories-title h2{
-        font-size: 1.4rem;
+        font-size: 25px;
     }
 
     .category-card img{

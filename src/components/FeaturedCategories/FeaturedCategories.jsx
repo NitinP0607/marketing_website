@@ -21,7 +21,6 @@ const FeaturedCategories = () => {
             </div>
           </div>
         ))}
-
       </div>
 
     </section>

@@ -1,17 +1,14 @@
 .hero {
   min-height: calc(100vh - 80px);
-  width: 100%;
   padding: 0px 3%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   gap: 10px;
   background: #e7e7e7;
-  overflow: hidden;
 }
 
 .hero-left {
-  width: 60%;
+  width: 55%;
   animation: fadeLeft 1s ease;
 }
 
@@ -77,10 +74,9 @@
 }
 
 .hero-right img {
-  width: 100%;
+  width: 95%;
   max-width: 650px;
   animation: float 5s ease-in-out infinite;
-
   transition: 0.4s;
 }
 
@@ -145,6 +141,7 @@
   }
   .hero-badge p {
     text-align: start;
+    font-size: 2rem;
     font-weight: 800;
   }
   .hero-left h1 {

@@ -1,5 +1,5 @@
 .featured-collection{
-    padding: 0px 1.2rem;
+    padding: 0px 0.75rem;
 }
 .featuredocllection-tittle{
     display: flex;
@@ -34,7 +34,6 @@
 .featured-collection-box img{
     width: 100%;
     height: 450px;
-    object-fit: cover;
 }
 .featuredcollection-boxdetails p{
     color: #4b4b4b;
@@ -56,9 +55,15 @@
         font-size: 1.4rem;
         text-align: center;
     }
+    .featured-collection-box{
+        width: 100%;
+        
+
+    }
 
     .featured-collection-box img{
         height: 400px;
+        width: 95%;
     }
     .collection-container{
         grid-template-columns: 1fr;

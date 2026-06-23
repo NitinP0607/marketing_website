@@ -8,7 +8,7 @@ function Footer() {
       <div className="footer-container">
 
         <div className="footer-section">
-          <h2>ShopEase</h2>
+          <h3>ShopEase</h3>
           <p>
             Discover the latest deals on fashion, electronics,
             beauty, and home essentials at unbeatable prices.
@@ -17,7 +17,7 @@ function Footer() {
 
         <div className="footer-section">
           <h3>Quick Links</h3>
-          <ul>
+          <ul className="footer-links" >
             <li>Home</li>
             <li>Products</li>
             <li>Categories</li>
@@ -27,7 +27,7 @@ function Footer() {
 
         <div className="footer-section">
           <h3>Customer Support</h3>
-          <ul>
+          <ul className="footer-policies" >
             <li>Contact Us</li>
             <li>FAQs</li>
             <li>Privacy Policy</li>
@@ -45,7 +45,6 @@ function Footer() {
             <FaLinkedin />
           </div>
         </div>
-
       </div>
 
       <div className="footer-bottom">
