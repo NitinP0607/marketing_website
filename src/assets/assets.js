@@ -1,246 +1,182 @@
-// import boatImg from "./images/boat.webp";
-// import iphoneImg from "./images/iphone.webp";
-// import samsungImg from "./images/samsung.webp";
-// import watchImg from "./images/watch.webp";
-// import pumaImg from "./images/puma.webp";
-// import jeansImg from "./images/jeans.webp";
-// import facewashImg from "./images/facewash.webp";
-// import sunscreenImg from "./images/sunscreen.webp";
-// import cookerImg from "./images/cooker.webp";
-// import bottleImg from "./images/bottle.webp";
-// import laptopImg from "./images/laptop.webp";
-// import earbudsImg from "./images/earbuds.webp";
-// import tvImg from "./images/tv.webp";
-// import bagImg from "./images/bag.webp";
-// import trimmerImg from "./images/trimmer.webp";
+import boat from "./boatHeadphone.webp";
+import iphone16 from "./iphone16_img.webp";
+import samsungwatch from "./samsungwatch.webp";
+import mobileCover from "./mobileCover.webp";
+import topladies from "./topladies.webp";
+import jeansladies from "./jeansladies.webp";
+import facewash from "./facewash.webp";
+import bottles from "./bottles.webp";
+import laptops from "./laptops.webp";;
+import bags from "./bags.webp";
+import shirtsforSell from "./T-shirts.jpg"
 
-// export const products = [
-// {
-//     _id: 1,
-//     title: "Boat Rockerz 450",
-//     description: "Wireless Bluetooth Headphones",
-//     image: boatImg,
-//     price: 1299,
-//     originalPrice: 3999,
-//     discount: 67,
-//     category: "Electronics",
-//     brand: "Boat",
-//     rating: 4.5,
-//     numReviews: 1254,
-//     affiliateLink: "",
-//     featured: true
-// },
-// {
-//     _id: 2,
-//     title: "Apple iPhone 16",
-//     description: "128GB Smartphone",
-//     image: iphoneImg,
-//     price: 79999,
-//     originalPrice: 84999,
-//     discount: 6,
-//     category: "Mobiles",
-//     brand: "Apple",
-//     rating: 4.8,
-//     numReviews: 980,
-//     affiliateLink: "",
-//     featured: true
-// },
-// {
-//     _id: 3,
-//     title: "Samsung Galaxy S25",
-//     description: "256GB Smartphone",
-//     image: samsungImg,
-//     price: 69999,
-//     originalPrice: 74999,
-//     discount: 7,
-//     category: "Mobiles",
-//     brand: "Samsung",
-//     rating: 4.7,
-//     numReviews: 830,
-//     affiliateLink: "",
-//     featured: false
-// },
-// {
-//     _id: 4,
-//     title: "Noise Smart Watch",
-//     description: "Fitness Smart Watch",
-//     image: watchImg,
-//     price: 2499,
-//     originalPrice: 4999,
-//     discount: 50,
-//     category: "Electronics",
-//     brand: "Noise",
-//     rating: 4.3,
-//     numReviews: 720,
-//     affiliateLink: "",
-//     featured: true
-// },
-// {
-//     _id: 5,
-//     title: "Puma Running Shoes",
-//     description: "Men Sports Shoes",
-//     image: pumaImg,
-//     price: 1999,
-//     originalPrice: 4999,
-//     discount: 60,
-//     category: "Fashion",
-//     brand: "Puma",
-//     rating: 4.4,
-//     numReviews: 430,
-//     affiliateLink: "",
-//     featured: true
-// },
-// {
-//     _id: 6,
-//     title: "Levi's Jeans",
-//     description: "Slim Fit Jeans",
-//     image: jeansImg,
-//     price: 1499,
-//     originalPrice: 2999,
-//     discount: 50,
-//     category: "Fashion",
-//     brand: "Levi's",
-//     rating: 4.2,
-//     numReviews: 310,
-//     affiliateLink: "",
-//     featured: false
-// },
-// {
-//     _id: 7,
-//     title: "Mamaearth Face Wash",
-//     description: "Vitamin C Face Wash",
-//     image: facewashImg,
-//     price: 249,
-//     originalPrice: 399,
-//     discount: 38,
-//     category: "Beauty",
-//     brand: "Mamaearth",
-//     rating: 4.6,
-//     numReviews: 1500,
-//     affiliateLink: "",
-//     featured: true
-// },
-// {
-//     _id: 8,
-//     title: "Lakme Sunscreen",
-//     description: "SPF 50 Sunscreen",
-//     image: sunscreenImg,
-//     price: 399,
-//     originalPrice: 699,
-//     discount: 43,
-//     category: "Beauty",
-//     brand: "Lakme",
-//     rating: 4.4,
-//     numReviews: 950,
-//     affiliateLink: "",
-//     featured: false
-// },
-// {
-//     _id: 9,
-//     title: "Prestige Pressure Cooker",
-//     description: "5 Litre Cooker",
-//     image: cookerImg,
-//     price: 1599,
-//     originalPrice: 2999,
-//     discount: 47,
-//     category: "Home & Kitchen",
-//     brand: "Prestige",
-//     rating: 4.5,
-//     numReviews: 650,
-//     affiliateLink: "",
-//     featured: true
-// },
-// {
-//     _id: 10,
-//     title: "Milton Water Bottle",
-//     description: "1 Litre Stainless Steel Bottle",
-//     image: bottleImg,
-//     price: 499,
-//     originalPrice: 899,
-//     discount: 44,
-//     category: "Home & Kitchen",
-//     brand: "Milton",
-//     rating: 4.3,
-//     numReviews: 560,
-//     affiliateLink: "",
-//     featured: false
-// },
-// {
-//     _id: 11,
-//     title: "ASUS Vivobook",
-//     description: "Core i5 Laptop",
-//     image: laptopImg,
-//     price: 52999,
-//     originalPrice: 59999,
-//     discount: 12,
-//     category: "Electronics",
-//     brand: "ASUS",
-//     rating: 4.5,
-//     numReviews: 780,
-//     affiliateLink: "",
-//     featured: true
-// },
-// {
-//     _id: 12,
-//     title: "Sony Wireless Earbuds",
-//     description: "Bluetooth Earbuds",
-//     image: earbudsImg,
-//     price: 3499,
-//     originalPrice: 5999,
-//     discount: 42,
-//     category: "Electronics",
-//     brand: "Sony",
-//     rating: 4.6,
-//     numReviews: 890,
-//     affiliateLink: "",
-//     featured: true
-// },
-// {
-//     _id: 13,
-//     title: "LG Smart TV",
-//     description: "43 Inch 4K TV",
-//     image: tvImg,
-//     price: 31999,
-//     originalPrice: 39999,
-//     discount: 20,
-//     category: "Electronics",
-//     brand: "LG",
-//     rating: 4.7,
-//     numReviews: 430,
-//     affiliateLink: "",
-//     featured: false
-// },
-// {
-//     _id: 14,
-//     title: "Wildcraft Backpack",
-//     description: "Travel Backpack",
-//     image: bagImg,
-//     price: 999,
-//     originalPrice: 1999,
-//     discount: 50,
-//     category: "Fashion",
-//     brand: "Wildcraft",
-//     rating: 4.3,
-//     numReviews: 270,
-//     affiliateLink: "",
-//     featured: true
-// },
-// {
-//     _id: 15,
-//     title: "Philips Trimmer",
-//     description: "Rechargeable Trimmer",
-//     image: trimmerImg,
-//     price: 1099,
-//     originalPrice: 1999,
-//     discount: 45,
-//     category: "Beauty",
-//     brand: "Philips",
-//     rating: 4.6,
-//     numReviews: 1120,
-//     affiliateLink: "",
-//     featured: true
-// }
-// ];
+export const sellproducts = [
+{
+    _id: 1,
+    title: "Boat Rockerz 450",
+    description: "Wireless Bluetooth Headphones",
+    image: boat,
+    price: 1299,
+    originalPrice: 3999,
+    discount: 67,
+    category: "Electronics",
+    brand: "Boat",
+    rating: 4.5,
+    numReviews: 1254,
+    affiliateLink: "",
+    featured: true
+},
+{
+    _id: 2,
+    title: "Apple iPhone 16",
+    description: "128GB Smartphone",
+    image: iphone16,
+    price: 79999,
+    originalPrice: 84999,
+    discount: 6,
+    category: "Mobiles",
+    brand: "Apple",
+    rating: 4.8,
+    numReviews: 980,
+    affiliateLink: "",
+    featured: true
+},
+{
+    _id: 3,
+    title: "Samsung Smart Watch",
+    description: "Bluetooth Smart Watch",
+    image: samsungwatch,
+    price: 6999,
+    originalPrice: 9999,
+    discount: 30,
+    category: "Electronics",
+    brand: "Samsung",
+    rating: 4.7,
+    numReviews: 830,
+    affiliateLink: "",
+    featured: false
+},
+{
+    _id: 4,
+    title: "Premium Mobile Cover",
+    description: "Stylish and Protective Mobile Cover",
+    image: mobileCover,
+    price: 249,
+    originalPrice: 499,
+    discount: 50,
+    category: "Accessories",
+    brand: "Spigen",
+    rating: 4.3,
+    numReviews: 720,
+    affiliateLink: "",
+    featured: true
+},
+{
+    _id: 5,
+    title: "Women's Fashion Tops",
+    description: "Beautiful Tops for Ladies",
+    image: topladies,
+    price: 799,
+    originalPrice: 1499,
+    discount: 47,
+    category: "Fashion",
+    brand: "Zara",
+    rating: 4.4,
+    numReviews: 430,
+    affiliateLink: "",
+    featured: true
+},
+{
+    _id: 6,
+    title: "Women's Jeans",
+    description: "Slim Fit Denim Jeans",
+    image: jeansladies,
+    price: 1499,
+    originalPrice: 2999,
+    discount: 50,
+    category: "Fashion",
+    brand: "Levi's",
+    rating: 4.2,
+    numReviews: 310,
+    affiliateLink: "",
+    featured: false
+},
+{
+    _id: 7,
+    title: "Mamaearth Face Wash",
+    description: "Vitamin C Face Wash",
+    image: facewash,
+    price: 249,
+    originalPrice: 399,
+    discount: 38,
+    category: "Beauty",
+    brand: "Mamaearth",
+    rating: 4.6,
+    numReviews: 1500,
+    affiliateLink: "",
+    featured: true
+},
+{
+    _id: 8,
+    title: "Milton Water Bottles",
+    description: "Durable Water Bottles",
+    image: bottles,
+    price: 399,
+    originalPrice: 699,
+    discount: 43,
+    category: "Home & Kitchen",
+    brand: "Milton",
+    rating: 4.4,
+    numReviews: 950,
+    affiliateLink: "",
+    featured: false
+},
+{
+    _id: 9,
+    title: "HP Laptop",
+    description: "High Performance Laptop",
+    image: laptops,
+    price: 45999,
+    originalPrice: 52999,
+    discount: 13,
+    category: "Electronics",
+    brand: "HP",
+    rating: 4.5,
+    numReviews: 650,
+    affiliateLink: "",
+    featured: true
+},
+{
+    _id: 10,
+    title: "Travel Backpack",
+    description: "Stylish and Spacious Bag",
+    image: bags,
+    price: 999,
+    originalPrice: 1799,
+    discount: 44,
+    category: "Fashion",
+    brand: "Skybags",
+    rating: 4.3,
+    numReviews: 560,
+    affiliateLink: "",
+    featured: false
+},
+{
+    _id: 11,
+    title: "Men's Casual Shirt",
+    description: "Comfortable Cotton Shirt",
+    image: shirtsforSell,
+    price: 799,
+    originalPrice: 1499,
+    discount: 47,
+    category: "Fashion",
+    brand: "Peter England",
+    rating: 4.5,
+    numReviews: 780,
+    affiliateLink: "",
+    featured: true
+}
+];
 
 import hero_img from "./hero-section.png";
 import earphone from "./earphone.jpg";

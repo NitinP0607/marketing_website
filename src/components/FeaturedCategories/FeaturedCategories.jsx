@@ -1,6 +1,7 @@
 import React from 'react'
 import "./FeaturedCategories.css"
 import { categories } from '../../assets/assets'
+import { Link } from "react-router-dom";
 
 const FeaturedCategories = () => {
   return (
@@ -12,14 +13,14 @@ const FeaturedCategories = () => {
       <div className="category-container">
 
         {categories.map((category) => (
-          <div className="category-card" key={category.id}>
+          <Link to={`/products/${category.title.toLowerCase()}`} className="category-card" key={category.id}>
             <img src={category.image} alt={category.id} />
             <div className="category-card-details">
                 
             <span>{category.title}</span>
             <p>{category.desc}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
