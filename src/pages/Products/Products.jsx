@@ -7,6 +7,12 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Search State
+  const [search, setSearch] = useState("");
+
+  // Category State
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
   const API_URL = "https://marketingserver-jsev.onrender.com";
 
   useEffect(() => {
@@ -26,6 +32,24 @@ const Products = () => {
 
     fetchProducts();
   }, []);
+
+  // Dynamic Categories
+  const categories = [
+    "All",
+    ...new Set(products.map((product) => product.category)),
+  ];
+
+  // Search + Category Filter
+  const filteredProducts = products.filter((product) => {
+    const matchesSearch = product.title
+      .toLowerCase()
+      .includes(search.toLowerCase());
+
+    const matchesCategory =
+      selectedCategory === "All" || product.category === selectedCategory;
+
+    return matchesSearch && matchesCategory;
+  });
 
   if (loading) {
     return (
@@ -47,9 +71,38 @@ const Products = () => {
         <h2>ALL PRODUCTS</h2>
       </div>
 
+      {/* Search */}
+      <div className="top-view">
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search Products..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+
+        {/* Categories */}
+        <div className="category-container">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={
+                selectedCategory === category
+                  ? "category-btn active-category"
+                  : "category-btn"
+              }
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <div className="products-container">
-        {products.length > 0 ? (
-          products.map((product) => (
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
             <div className="product-card" key={product._id}>
               <img src={product.image} alt={product.title} />
 
@@ -91,7 +144,12 @@ const Products = () => {
             </div>
           ))
         ) : (
-          <h3 style={{ textAlign: "center", width: "100%" }}>
+          <h3
+            style={{
+              textAlign: "center",
+              width: "100%",
+            }}
+          >
             No Products Found
           </h3>
         )}
