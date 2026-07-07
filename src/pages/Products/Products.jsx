@@ -51,10 +51,7 @@ const Products = () => {
         {products.length > 0 ? (
           products.map((product) => (
             <div className="product-card" key={product._id}>
-              <img
-                src={`${API_URL}${product.image}`}
-                alt={product.title}
-              />
+              <img src={product.image} alt={product.title} />
 
               <div className="product-details">
                 <h3>{product.title}</h3>
@@ -77,7 +74,7 @@ const Products = () => {
                     {Math.round(
                       ((product.originalPrice - product.price) /
                         product.originalPrice) *
-                        100
+                        100,
                     )}
                     % OFF
                   </span>
@@ -88,9 +85,7 @@ const Products = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="view-btn">
-                    View Deal
-                  </button>
+                  <button className="view-btn">View Deal</button>
                 </a>
               </div>
             </div>

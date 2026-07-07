@@ -10,7 +10,6 @@ const FeaturedCategories = () => {
             <h2>FEATURED CATEGORIES OF OUR COLLECTION</h2>
         </div>
       <div className="category-container">
-
         {categories.map((category) => (
           <Link to={`/products/${category.title.toLowerCase()}`} className="category-card" key={category.id}>
             <img src={category.image} alt={category.id} />
