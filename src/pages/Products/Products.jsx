@@ -104,42 +104,51 @@ const Products = () => {
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <div className="product-card" key={product._id}>
-              <img src={product.image} alt={product.title} />
+              <div className="product-image-container">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="product-image"
+                />
+              </div>
+              <div className="product-content">
+                <div className="product-details">
+                  <h3>{product.title}</h3>
 
-              <div className="product-details">
-                <h3>{product.title}</h3>
+                  <p>{product.description}</p>
 
-                <p>{product.description}</p>
+                  <div className="rating">
+                    <FaStar color="gold" />
+                    <span>{product.rating || "4.5"}</span>
+                  </div>
 
-                <div className="rating">
-                  <FaStar color="gold" />
-                  <span>{product.rating || "4.5"}</span>
+                  <div className="price-section">
+                    <span className="price">₹{product.price}</span>
+
+                    <span className="original-price">
+                      ₹{product.originalPrice}
+                    </span>
+
+                    <span className="discount">
+                      {Math.round(
+                        ((product.originalPrice - product.price) /
+                          product.originalPrice) *
+                          100,
+                      )}
+                      % OFF
+                    </span>
+                  </div>
+
+                  <div className="product-footer">
+                    <a
+                      href={product.affiliateLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="view-btn">View Deal</button>
+                    </a>
+                  </div>
                 </div>
-
-                <div className="price-section">
-                  <span className="price">₹{product.price}</span>
-
-                  <span className="original-price">
-                    ₹{product.originalPrice}
-                  </span>
-
-                  <span className="discount">
-                    {Math.round(
-                      ((product.originalPrice - product.price) /
-                        product.originalPrice) *
-                        100,
-                    )}
-                    % OFF
-                  </span>
-                </div>
-
-                <a
-                  href={product.affiliateLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="view-btn">View Deal</button>
-                </a>
               </div>
             </div>
           ))
