@@ -57,7 +57,7 @@
    Categories
 =========================== */
 
-.category-container {
+.category-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -213,7 +213,7 @@
     max-width: 100%;
   }
 
-  .category-container {
+  .category-box {
     justify-content: flex-start;
   }
 
@@ -252,7 +252,7 @@
     padding: 14px 18px;
   }
 
-  .category-container {
+  .category-box{
     justify-content: flex-start;
     gap: 10px;
   }

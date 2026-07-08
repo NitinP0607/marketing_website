@@ -83,7 +83,7 @@ const Products = () => {
         </div>
 
         {/* Categories */}
-        <div className="category-container">
+        <div className="category-box">
           {categories.map((category) => (
             <button
               key={category}
