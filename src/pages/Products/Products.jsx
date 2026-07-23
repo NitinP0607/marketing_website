@@ -1,6 +1,7 @@
 import "./Products.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 
 const Products = () => {

@@ -15,7 +15,7 @@ function About() {
 
       {/* Who We Are */}
       <div className="about-section">
-        <h2>Who We Are</h2>
+        <h2>Who We Are .?</h2>
         <p>
           Welcome to <strong>ShopEase!</strong> We are dedicated to helping
           shoppers find the best products at the best prices. Our platform
@@ -50,6 +50,7 @@ function About() {
       {/* Why Choose Us */}
       <div className="about-section">
         <h2>Why Choose Us?</h2>
+      <div className="choose-us-right">
         <ul className="checklist">
           <li>✔ Curated Product Recommendations</li>
           <li>✔ Best Deals and Discounts</li>
@@ -57,6 +58,10 @@ function About() {
           <li>✔ Updated Product Collections</li>
           <li>✔ Easy Shopping Experience</li>
         </ul>
+      </div>
+      <div className="choose-us-left">
+        <img src="" alt="" />
+      </div>
       </div>
 
       {/* Affiliate Disclosure */}
