@@ -5,3 +5,15 @@
   font-family: "Outfit", sans-serif;
   box-sizing: border-box;
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

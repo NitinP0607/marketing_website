@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
+import Reveal from "./../../components/Reveal";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -54,117 +55,121 @@ const Products = () => {
 
   if (loading) {
     return (
+      <Reveal>
+        <section className="products">
+          <div className="products-title">
+            <h2>ALL PRODUCTS</h2>
+          </div>
+
+          <h3 style={{ textAlign: "center", marginTop: "40px" }}>
+            Loading Products...
+          </h3>
+        </section>
+      </Reveal>
+    );
+  }
+
+  return (
+    <Reveal>
       <section className="products">
         <div className="products-title">
           <h2>ALL PRODUCTS</h2>
         </div>
 
-        <h3 style={{ textAlign: "center", marginTop: "40px" }}>
-          Loading Products...
-        </h3>
-      </section>
-    );
-  }
+        {/* Search */}
+        <div className="top-view">
+          <div className="search-container">
+            <input
+              type="text"
+              placeholder="Search Products..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
 
-  return (
-    <section className="products">
-      <div className="products-title">
-        <h2>ALL PRODUCTS</h2>
-      </div>
-
-      {/* Search */}
-      <div className="top-view">
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Search Products..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+          {/* Categories */}
+          <div className="category-box">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={
+                  selectedCategory === category
+                    ? "category-btn active-category"
+                    : "category-btn"
+                }
+                onClick={() => setSelectedCategory(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Categories */}
-        <div className="category-box">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={
-                selectedCategory === category
-                  ? "category-btn active-category"
-                  : "category-btn"
-              }
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-      </div>
+        <div className="products-container">
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product) => (
+              <div className="product-card" key={product._id}>
+                <div className="product-image-container">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="product-image"
+                  />
+                </div>
+                <div className="product-content">
+                  <div className="product-details">
+                    <h3>{product.title}</h3>
 
-      <div className="products-container">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => (
-            <div className="product-card" key={product._id}>
-              <div className="product-image-container">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="product-image"
-                />
-              </div>
-              <div className="product-content">
-                <div className="product-details">
-                  <h3>{product.title}</h3>
+                    <p>{product.description}</p>
 
-                  <p>{product.description}</p>
+                    <div className="rating">
+                      <FaStar color="gold" />
+                      <span>{product.rating || "4.5"}</span>
+                    </div>
 
-                  <div className="rating">
-                    <FaStar color="gold" />
-                    <span>{product.rating || "4.5"}</span>
-                  </div>
+                    <div className="price-section">
+                      <span className="price">₹{product.price}</span>
 
-                  <div className="price-section">
-                    <span className="price">₹{product.price}</span>
+                      <span className="original-price">
+                        ₹{product.originalPrice}
+                      </span>
 
-                    <span className="original-price">
-                      ₹{product.originalPrice}
-                    </span>
+                      <span className="discount">
+                        {Math.round(
+                          ((product.originalPrice - product.price) /
+                            product.originalPrice) *
+                            100,
+                        )}
+                        % OFF
+                      </span>
+                    </div>
 
-                    <span className="discount">
-                      {Math.round(
-                        ((product.originalPrice - product.price) /
-                          product.originalPrice) *
-                          100,
-                      )}
-                      % OFF
-                    </span>
-                  </div>
-
-                  <div className="product-footer">
-                    <a
-                      href={product.affiliateLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="view-btn">View Deal</button>
-                    </a>
+                    <div className="product-footer">
+                      <a
+                        href={product.affiliateLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <button className="view-btn">View Deal</button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <h3
-            style={{
-              textAlign: "center",
-              width: "100%",
-            }}
-          >
-            No Products Found
-          </h3>
-        )}
-      </div>
-    </section>
+            ))
+          ) : (
+            <h3
+              style={{
+                textAlign: "center",
+                width: "100%",
+              }}
+            >
+              No Products Found
+            </h3>
+          )}
+        </div>
+      </section>
+    </Reveal>
   );
 };
 
