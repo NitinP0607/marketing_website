@@ -1,5 +1,5 @@
 import "./CategoryProducts.css";
-import { sellproducts } from "../../assets/assets";
+import { products } from "../../assets/assets";
 import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 
@@ -9,7 +9,7 @@ const CategoryProducts = () => {
 
   console.log(category)
 
-  const filteredProducts = sellproducts.filter(
+  const filteredProducts = products.filter(
     (product) =>
       product.category.toLowerCase() === category.toLowerCase()
   );
