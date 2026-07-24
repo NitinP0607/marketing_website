@@ -2,7 +2,6 @@ import { assets } from "../../assets/assets";
 import { useNavigate } from "react-router-dom";
 import "./About.css";
 
-
 function About() {
   const navigate = useNavigate();
 
@@ -40,15 +39,29 @@ function About() {
           </div>
           <div className="card">
             <h3>Fashion</h3>
-            <p>Trending clothing, footwear, bags, and stylish outfits.</p>
+            <p>
+              Curated apparel, versatile footwear, and trend-setting accessories
+              handpicked to elevate your everyday wardrobe with uncompromised
+              quality, fit, and style.
+            </p>
           </div>
+
           <div className="card">
             <h3>Beauty</h3>
-            <p>Skincare, makeup, and personal care products.</p>
+            <p>
+              Premium skincare essentials, top-rated cosmetics, and personal
+              care formulas carefully vetted for safety, proven effectiveness,
+              and your daily routine.
+            </p>
           </div>
+
           <div className="card">
             <h3>Home & Kitchen</h3>
-            <p>Essential appliances and home products.</p>
+            <p>
+              High-performance appliances, everyday culinary tools, and durable
+              home organization essentials designed to elevate convenience and
+              transform your living space.
+            </p>
           </div>
         </div>
       </div>
@@ -115,7 +128,9 @@ function About() {
       {/* Call to Action */}
       <div className="about-cta">
         <h2>Ready to discover amazing products?</h2>
-        <button className="primary-btn" onClick={() => navigate('/products')}>Explore Products</button>
+        <button className="primary-btn" onClick={() => navigate("/products")}>
+          Explore Products
+        </button>
       </div>
     </section>
   );
